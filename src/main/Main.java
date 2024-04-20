@@ -4,29 +4,44 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // <condição seletora> ? <valor de retorno verdadeiro> : <valor de retorno falso>
-        int a, b, aux;
+        int number;
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Enter the numbers: ");
-        a = in.nextInt();
-        b = in.nextInt();
-
+        System.out.print("Enter the number: ");
+        number = in.nextInt();
         in.close();
 
-        aux = a;
-        a = (a > b) ? b : a;
-        b = (a == b) ? aux : b;
+        switch (number) {
+            case 1:
+                System.out.println("Categoria " + number);
+                break;
+            case 2:
+                System.out.println("Categoria " + number);
+                break;
+            case 3:
+                System.out.println("Categoria " + number);
+                break;
+            default:
+                break;
+        }
+
 
         /*
-        this is the same thing
-        if (a > b) {
-            aux = a;
-            a = b;
-            b = aux;
+        is the same thing
+        switch (number) {
+            case 1:
+            case 2:
+            case 3:
+                System.out.println("Categoria " + number);
+                break;
+            default:
+                break;
+        }
+
+        and this too
+        if(number == 1 || number == 2 || number == 3){
+            System.out.println("Categoria " + number);
         }
         */
-
-        System.out.println("Result: " + a + ", " + b);
     }
 }
