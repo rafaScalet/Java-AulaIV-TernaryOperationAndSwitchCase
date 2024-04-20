@@ -1,20 +1,17 @@
 package main;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        int number = 0;
+        String ch = "";
+        Scanner in = new Scanner(System.in);
 
-        while(number < 10){
-            System.out.println("[number]" + number);
-            number++;
-        }
-
-        /*
-        is the same thing
         do{
-            System.out.println("[number]" + number);
-            number++;
-        } while(number < 10);
-        */
+            System.out.println("Would you like to exit? <Y/N>");
+            ch = in.next().toUpperCase();
+        } while(!ch.equals("Y"));
+
+        in.close();
     }
 }
